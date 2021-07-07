@@ -21,7 +21,7 @@ f.close()
 with open('task_3.txt', 'r') as file:
     salary = []
     surname = []
-    string = f.read().strip().split('\n')
+    string = file.read().strip().split('\n')
 # При помощи цикла преобразуем строки в список, разделяя элементы по пробелу, находим,
 # в какой строке значение второго элемента не превышает 20 000, добавляем первый элемент этого списка в список
 # surname, а вторые элементы остальных собираем в список salary:
@@ -33,4 +33,4 @@ with open('task_3.txt', 'r') as file:
             pass
         salary.append(i[1])
 
-print(f'Оклад меньше 20.000 имеет {p}, средняя зарплата', "{:.2f}".format(sum(map(int, salary)) / len(salary)))
+print(f'Оклад меньше 20.000 имеет {surname[0]}, средняя зарплата', "{:.2f}".format(sum(map(int, salary)) / len(salary)))
